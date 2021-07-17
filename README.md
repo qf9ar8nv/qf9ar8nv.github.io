@@ -383,23 +383,6 @@ which are the dimensions of the actual picture for it to be rolling down as you 
 
 If your posts are not displaying ensure that you have added the line `paginate: 5` to `_config.yml`.
 
-### Layout: Page 📄
-
-The page layout have a bit more features explained here.
-
-```yml
-
----
-layout: page
-title: "About" 
-subtitle: "This is a subtitle"   
-feature-img: "assets/img/sample.png" 
-permalink: /about.html               # Set a permalink your your page
-hide: true                           # Prevent the page title to appear in the navbar
-icon: "fa-search"                    # Will Display only the fontawesome icon (here: fa-search) and not the title
-tags: [sample, markdown, html]
----
-```
 
 The hide only hides your page from the navigation bar, it is however still generated and can be access through its link. 
 
@@ -435,78 +418,6 @@ img: "assets/img/portfolio/cake.png"           # Will display the image in the p
 date: 2019-07-25		 	       # Not mandatory, however needs to be in date format to display the date
 ---
 ```
-
-#### Portfolio in gem
-
-Make sure your `_config.yml` contains the following if you are using the theme as a gem:
-
-```yml
-# PORTFOLIO
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/:name
-```    
-
-This creates the collection for Jekyll, so it can find and display your portfolio posts.
-
-### Feature: Gallery 🖼
-
-You can create a gallery using [Masonry JS](https://masonry.desandro.com/) which will placing the pictures in optimal position 
-based on available vertical space. 
-You need to specify the `gallery_path` which will be used to find the pictures to render. 
-It will take all the pictures under that directory. Then use the `include` to add it in your page. 
-
-```yml
-
----
-layout: page
-title: Gallery
-gallery: "assets/img/pexels"
----
-
-{% include default/gallery.html gallery_path=page.gallery %}
-```
-
-
-### Feature: Search 🔍
-
-The search feature is based on [Simple-Jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search) 
-there is a `search.json` file that will create a list of all the site posts, pages and portfolios. 
-
-Then there's a `search.js` displaying the formatted results entered in the `search.html` page.
-
-The search page can be hidden with the `hide` option. You can remove the icon by removing `icon`:
-
-```yml
-
----
-layout: search
-title: Search
-icon: "search"
----
-```
-
-### Feature: Tags 🏷
-
-Tags should be placed between `[]` in your post metadata. Separate each tag with a comma. 
-Tags are recommended for posts and portfolio items.
-
-For example:
-
-```yml
-
----
-layout: post
-title: Markdown and HTML
-tags: [sample, markdown, html]
----
-```
-
-> Tags are case-sensitive `Tag_nAme` ≠ `tag_name`
-
-All the tags will be listed in `tags.html` with a link toward the pages or posts.
-The Tag page can be hidden with the `hide` option. You can remove the icon by removing `icon` (like for the search page).
 
 ## Advanced
 

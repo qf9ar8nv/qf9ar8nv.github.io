@@ -5,7 +5,7 @@ url: "https://qf9ar8nv.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: hynnch2                                   # site's title
 description: profile and portfolio      # used by search engines
-avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
+avatar:                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
@@ -37,7 +37,7 @@ comments:
     issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
 
 # PAGINATION
-paginate: 5
+paginate: 1
 paginate_path: "/blog/page:num"
 
 # PORTFOLIO

@@ -4,13 +4,4 @@ feed:
   path: feed.xml  # RSS feed path
 
 # Share button options
-share:
-  email: true
-  facebook: true
-  linkedin: true
-  pinterest: true
-  pocket:
-  reddit: true
-  tumblr: true
-  twitter: true
-  wordpress:
+
